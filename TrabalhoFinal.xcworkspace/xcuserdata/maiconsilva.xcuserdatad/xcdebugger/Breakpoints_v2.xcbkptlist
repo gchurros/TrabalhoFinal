@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrabalhoFinal/NovaPublicacaoController.swift"
+            timestampString = "552461950.53135"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrabalhoFinal/NovaPublicacaoController.swift"
+            timestampString = "552461950.531487"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "NovaPublicacaoController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrabalhoFinal.NovaPublicacaoController.coordenadas.getter : __C.CLLocationCoordinate2D"
+                  moduleName = "TrabalhoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maiconsilva/Desktop/FURB/TrabalhoFinal/TrabalhoFinal/NovaPublicacaoController.swift"
+                  timestampString = "552190927.662781"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "110">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrabalhoFinal.NovaPublicacaoController.coordenadas.setter : __C.CLLocationCoordinate2D"
+                  moduleName = "TrabalhoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maiconsilva/Desktop/FURB/TrabalhoFinal/TrabalhoFinal/NovaPublicacaoController.swift"
+                  timestampString = "552190927.670266"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "127">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrabalhoFinal.NovaPublicacaoController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; TrabalhoFinal.NovaPublicacaoController"
+                  moduleName = "TrabalhoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maiconsilva/Desktop/FURB/TrabalhoFinal/TrabalhoFinal/NovaPublicacaoController.swift"
+                  timestampString = "552190927.678346"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "71">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrabalhoFinal.NovaPublicacaoController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;TrabalhoFinal.NovaPublicacaoController&gt;"
+                  moduleName = "TrabalhoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maiconsilva/Desktop/FURB/TrabalhoFinal/TrabalhoFinal/NovaPublicacaoController.swift"
+                  timestampString = "552190927.6863559"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "42">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrabalhoFinal/NovaPublicacaoController.swift"
+            timestampString = "552461950.531588"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "addTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.SessionManager.MultipartFormDataEncodingResult) -&gt; () in TrabalhoFinal.NovaPublicacaoController.addTapped(Any) -&gt; ()"
+                  moduleName = "TrabalhoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maiconsilva/Desktop/FURB/TrabalhoFinal/TrabalhoFinal/NovaPublicacaoController.swift"
+                  timestampString = "552196231.1545399"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "129">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in closure #2 (Alamofire.SessionManager.MultipartFormDataEncodingResult) -&gt; () in TrabalhoFinal.NovaPublicacaoController.addTapped(Any) -&gt; ()"
+                  moduleName = "TrabalhoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maiconsilva/Desktop/FURB/TrabalhoFinal/TrabalhoFinal/NovaPublicacaoController.swift"
+                  timestampString = "552196231.162834"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrabalhoFinal/NovaPublicacaoController.swift"
+            timestampString = "552461950.531661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "addTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrabalhoFinal/NovaPublicacaoController.swift"
+            timestampString = "552461950.5317301"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "addTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrabalhoFinal/NovaPublicacaoController.swift"
+            timestampString = "552461950.531799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "addTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrabalhoFinal/NovaPublicacaoController.swift"
+            timestampString = "552461950.531868"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "addTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrabalhoFinal/ViewController.swift"
+            timestampString = "552461950.5319639"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "mapView(_:didTap:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrabalhoFinal/MapMarkerInfoWindow.swift"
+            timestampString = "552461950.532083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "editClick(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrabalhoFinal/MapMarkerInfoWindow.swift"
+            timestampString = "552461950.5326591"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "MapMarkerInfoWindow"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrabalhoFinal.MapMarkerInfoWindow.vc.getter : TrabalhoFinal.NovaPublicacaoController"
+                  moduleName = "TrabalhoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maiconsilva/Desktop/FURB/TrabalhoFinal/TrabalhoFinal/MapMarkerInfoWindow.swift"
+                  timestampString = "552461951.382997"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrabalhoFinal.MapMarkerInfoWindow.vc.setter : TrabalhoFinal.NovaPublicacaoController"
+                  moduleName = "TrabalhoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maiconsilva/Desktop/FURB/TrabalhoFinal/TrabalhoFinal/MapMarkerInfoWindow.swift"
+                  timestampString = "552461951.3913701"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrabalhoFinal.MapMarkerInfoWindow.init(frame: __C.CGRect) -&gt; TrabalhoFinal.MapMarkerInfoWindow"
+                  moduleName = "TrabalhoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maiconsilva/Desktop/FURB/TrabalhoFinal/TrabalhoFinal/MapMarkerInfoWindow.swift"
+                  timestampString = "552461951.398679"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrabalhoFinal.MapMarkerInfoWindow.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;TrabalhoFinal.MapMarkerInfoWindow&gt;"
+                  moduleName = "TrabalhoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maiconsilva/Desktop/FURB/TrabalhoFinal/TrabalhoFinal/MapMarkerInfoWindow.swift"
+                  timestampString = "552461951.405986"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "222">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
