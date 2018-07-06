@@ -16,24 +16,26 @@
             <rect key="frame" x="0.0" y="0.0" width="110" height="142"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Descricao de teste descricao de teste descricao de teste descricao de teste descricao de teste" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="fhc-S8-pap">
-                    <rect key="frame" x="5" y="63" width="100" height="59"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Descricao de teste descricao de teste" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhc-S8-pap">
+                    <rect key="frame" x="5" y="70" width="100" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="8"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAw-WX-Kas">
-                    <rect key="frame" x="16" y="123" width="33" height="15"/>
+                    <rect key="frame" x="5" y="122" width="49" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Editar">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="editClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="snt-cS-kcA"/>
+                        <action selector="editar:" destination="iN0-l3-epB" eventType="touchUpInside" id="xUe-IA-HIx"/>
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a00-aL-Uin">
@@ -48,15 +50,16 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ey-kM-LKo">
-                    <rect key="frame" x="58" y="123" width="36" height="15"/>
+                    <rect key="frame" x="58" y="122" width="47" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Excluir">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="deleteClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="l8L-lY-fIV"/>
+                        <action selector="deletar:" destination="iN0-l3-epB" eventType="touchUpInside" id="oB0-E0-nu8"/>
                     </connections>
                 </button>
             </subviews>
@@ -65,7 +68,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="deletarButton" destination="5ey-kM-LKo" id="A7S-gn-ayx"/>
                 <outlet property="descricao" destination="fhc-S8-pap" id="pri-Qo-CBf"/>
+                <outlet property="editarButton" destination="kAw-WX-Kas" id="ZnS-jU-pPs"/>
                 <outlet property="imagem" destination="yq4-Vu-0a6" id="ZYv-RM-1TQ"/>
             </connections>
             <point key="canvasLocation" x="-97" y="-150"/>
