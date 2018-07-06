@@ -34,15 +34,24 @@ class NovaPublicacaoController: UIViewController, UINavigationControllerDelegate
             self.descricao.text = publicacao.descricao
             self.imagem.image = publicacao.foto
         }
-        
-        self.imagem.image = #imageLiteral(resourceName: "icons8-menu-filled-50")
     }
     
     @IBAction func takePic(_ sender: Any) {
-        imagePicker =  UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        present(imagePicker, animated: true, completion: nil)
+        let alertImagem = UIAlertController(title: "Nova imagem", message: "Selecione uma opcao abaixo", preferredStyle: UIAlertControllerStyle.alert)
+        alertImagem.addAction(UIAlertAction(title: "Tirar uma foto", style: UIAlertActionStyle.default, handler: { action in
+                self.imagePicker =  UIImagePickerController()
+                self.imagePicker.delegate = self
+                self.imagePicker.sourceType = .camera
+                self.present(self.imagePicker, animated: true, completion: nil)
+        }))
+        alertImagem.addAction(UIAlertAction(title: "Escolher da galeria", style: UIAlertActionStyle.default, handler: { action in
+            self.imagePicker =  UIImagePickerController()
+            self.imagePicker.delegate = self
+            self.imagePicker.sourceType = .photoLibrary
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }))
+        
+        self.present(alertImagem, animated: true, completion: nil)
     }
     
     @objc func addTapped(_ sender: Any) {
@@ -58,7 +67,6 @@ class NovaPublicacaoController: UIViewController, UINavigationControllerDelegate
             }
         }
         
-        
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 if let image = self.imagem.image {
@@ -67,7 +75,6 @@ class NovaPublicacaoController: UIViewController, UINavigationControllerDelegate
                         multipartFormData.append(imageData!, withName: "image", fileName: "photo.jpg", mimeType: "jpg/png")
                     }
                 }
-                
             multipartFormData.append(self.publicacao.descricao.data(using: .utf8)!, withName: "descricao")
             multipartFormData.append(String(self.coordenadas.latitude).data(using: .utf8)!, withName: "lat")
             multipartFormData.append(String(self.coordenadas.longitude).data(using: .utf8)!, withName: "long")
@@ -109,6 +116,7 @@ class NovaPublicacaoController: UIViewController, UINavigationControllerDelegate
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
+        imagem.contentMode = .scaleAspectFit
         imagem.image = info["UIImagePickerControllerOriginalImage"] as? UIImage
     }
 }

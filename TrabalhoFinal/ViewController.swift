@@ -18,16 +18,18 @@ class Publicacao    {
     var longitude: Double = 0
     var foto: UIImage = UIImage()
     var id: Int = 0
+    var unique: String = ""
 }
 
-class ViewController: UIViewController, GMSMapViewDelegate, StoreDelegate {
+class ViewController: UIViewController, GMSMapViewDelegate, StoreDelegate, CLLocationManagerDelegate {
     @IBOutlet var mapaView: GMSMapView!
     @IBOutlet weak var addButton: UIButton!
+    var locationManager = CLLocationManager()
     
     var infoWindowIsOpen: Bool = false
     var markerDict: [Int: GMSMarker] = [:]
     var addingMarker : Bool = false
-    var camera = GMSCameraPosition.camera(withLatitude: 37.36, longitude: -122.0, zoom: 6.0)
+    //var camera = GMSCameraPosition.camera(withLatitude: 37.36, longitude: -122.0, zoom: 6.0)
     
     var marker:GMSMarker! = GMSMarker()
     var tappedMarker:GMSMarker = GMSMarker()
@@ -93,6 +95,10 @@ class ViewController: UIViewController, GMSMapViewDelegate, StoreDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapaView.isMyLocationEnabled = true
+        
+        self.locationManager.delegate = self
+        self.locationManager.startUpdatingLocation()
         
         Alamofire.request("https://projetoserver.herokuapp.com/publicacao/", method: .get, encoding: JSONEncoding.default).responseJSON { response in
             guard let locaisArr = response.result.value as? NSArray else { return }
@@ -127,34 +133,50 @@ class ViewController: UIViewController, GMSMapViewDelegate, StoreDelegate {
         addButton.isHidden = false
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
-        mapaView.camera = camera
+        //mapaView.camera = camera
         mapaView.delegate = self
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations.last
+        
+        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 17.0)
+        
+        self.mapaView?.animate(to: camera)
+        self.locationManager.stopUpdatingLocation()
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         tappedMarker = marker
-        Alamofire.request("https://projetoserver.herokuapp.com/publicacao/" + String((marker.userData as! Publicacao).id), method: .get, encoding: JSONEncoding.default).responseJSON { response in
-            if let pubObj = response.result.value as? NSDictionary {
-                let pub = marker.userData as! Publicacao
-                
-                if let id = pubObj.value(forKey: "id") as? Int { pub.id = id }
-                if let descricao = pubObj.value(forKey: "descricao") as? String { pub.descricao = descricao }
-                if let imageData = pubObj.value(forKey: "imagem") as? Data { pub.foto = UIImage(data: imageData)! }
-                
-                self.infoWindow.removeFromSuperview()
-                self.infoWindow = MapMarkerInfoWindow.instanceFromNib() as! MapMarkerInfoWindow
-                self.infoWindow.marcador = marker
-                self.infoWindow.publicacao = pub
-                self.infoWindow.center = mapView.projection.point(for: marker.position)
-                self.infoWindow.center.y -= 120
-                self.infoWindow.delegate = self
-                self.infoWindow.isUserInteractionEnabled = true
-                self.infoWindowIsOpen = true
-                self.infoWindow.descricao.text = pub.descricao
-                self.infoWindow.imagem.image = pub.foto
-                self.infoWindow.desabilitarBotoes()
-                
-                self.view.addSubview(self.infoWindow)
+        if (marker.userData != nil) {
+            Alamofire.request("https://projetoserver.herokuapp.com/publicacao/" + String((marker.userData as! Publicacao).id), method: .get, encoding: JSONEncoding.default).responseJSON { response in
+                if let pubObj = response.result.value as? NSDictionary {
+                    let pub = marker.userData as! Publicacao
+                    
+                    if let id = pubObj.value(forKey: "id") as? Int { pub.id = id }
+                    if let descricao = pubObj.value(forKey: "descricao") as? String { pub.descricao = descricao }
+                    if let imageData = pubObj.value(forKey: "imagem") as? Data { pub.foto = UIImage(data: imageData)! }
+                    if let unique = pubObj.value(forKey: "unique") as? String { pub.unique = unique }
+                    
+                    self.infoWindow.removeFromSuperview()
+                    self.infoWindow = MapMarkerInfoWindow.instanceFromNib() as! MapMarkerInfoWindow
+                    self.infoWindow.marcador = marker
+                    self.infoWindow.publicacao = pub
+                    self.infoWindow.center = mapView.projection.point(for: marker.position)
+                    self.infoWindow.center.y -= 120
+                    self.infoWindow.delegate = self
+                    self.infoWindow.isUserInteractionEnabled = true
+                    self.infoWindowIsOpen = true
+                    self.infoWindow.descricao.text = pub.descricao
+                    self.infoWindow.imagem.image = pub.foto
+                    
+                    if (UIDevice.current.identifierForVendor!.uuidString != pub.unique) {
+                        self.infoWindow.desabilitarBotoes()
+                    }
+                    
+                    self.view.addSubview(self.infoWindow)
+                }
             }
         }
         
